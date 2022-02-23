@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "08c40d8bb8e171be82502353c0ea1266",
+    "content-hash": "154a0120a2033c10c53d88f8b1e0b289",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -1248,6 +1248,68 @@
                 }
             ],
             "time": "2022-01-18T15:43:28+00:00"
+        },
+        {
+            "name": "edalzell/forma",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/edalzell/statamic-forma.git",
+                "reference": "80977525924f15eff53b02262e7b84b0e817add7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/edalzell/statamic-forma/zipball/80977525924f15eff53b02262e7b84b0e817add7",
+                "reference": "80977525924f15eff53b02262e7b84b0e817add7",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^7.30.3 || ^8.24",
+                "php": "^7.4 || ^8.0",
+                "statamic/cms": "^3.0",
+                "stillat/proteus": "^1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3.1",
+                "nunomaduro/collision": "^4.1 || ^5.0",
+                "orchestra/testbench": "^5.0 || ^6.0",
+                "phpunit/phpunit": "^8.0 || ^9.0"
+            },
+            "type": "statamic-addon",
+            "extra": {
+                "statamic": {
+                    "name": "Forma",
+                    "description": "Create addon config page in the CP"
+                },
+                "laravel": {
+                    "providers": [
+                        "Edalzell\\Forma\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Edalzell\\Forma\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "mit"
+            ],
+            "authors": [
+                {
+                    "name": "Erin Dalzell",
+                    "email": "erin@silentz.co",
+                    "homepage": "https://silentz.co",
+                    "role": "Founder"
+                }
+            ],
+            "description": "Give control panel access to your addon's config",
+            "support": {
+                "issues": "https://github.com/edalzell/statamic-forma/issues",
+                "source": "https://github.com/edalzell/statamic-forma/tree/v1.0"
+            },
+            "time": "2021-08-13T03:40:02+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -4822,6 +4884,64 @@
                 "source": "https://github.com/statamic/Stringy"
             },
             "time": "2020-12-09T23:24:32+00:00"
+        },
+        {
+            "name": "stillat/proteus",
+            "version": "v1.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Stillat/proteus.git",
+                "reference": "9374f0615c7414f3a4d648495b12fd77c65a6652"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Stillat/proteus/zipball/9374f0615c7414f3a4d648495b12fd77c65a6652",
+                "reference": "9374f0615c7414f3a4d648495b12fd77c65a6652",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^7.0 || ^8.0 || ^9.0",
+                "nikic/php-parser": "^4.10.3"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^5.0 || ^6.0",
+                "phpunit/phpunit": "^8.5 || ^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Stillat\\Proteus\\WriterServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stillat\\Proteus\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "John Koster",
+                    "email": "john@stillat.com"
+                }
+            ],
+            "description": "Provides utilities for parsing and updating Laravel-style PHP configuration files.",
+            "support": {
+                "issues": "https://github.com/Stillat/proteus/issues",
+                "source": "https://github.com/Stillat/proteus/tree/v1.0.10"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/JohnathonKoster",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-02-10T01:22:26+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
