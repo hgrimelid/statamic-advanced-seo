@@ -2,17 +2,17 @@
 
 namespace Aerni\AdvancedSeo;
 
-use Statamic\Statamic;
-use Edalzell\Forma\Forma;
-use Statamic\Facades\Git;
-use Statamic\Stache\Stache;
-use Statamic\Facades\CP\Nav;
-use Statamic\Facades\Permission;
+use Aerni\AdvancedSeo\Data\SeoVariables;
+use Aerni\AdvancedSeo\Http\Controllers\Cp\ConfigController;
 use Aerni\AdvancedSeo\Models\Defaults;
 use Aerni\AdvancedSeo\Stache\SeoStore;
-use Aerni\AdvancedSeo\Data\SeoVariables;
+use Edalzell\Forma\Forma;
+use Statamic\Facades\CP\Nav;
+use Statamic\Facades\Git;
+use Statamic\Facades\Permission;
 use Statamic\Providers\AddonServiceProvider;
-use Aerni\AdvancedSeo\Http\Controllers\Cp\ConfigController;
+use Statamic\Stache\Stache;
+use Statamic\Statamic;
 
 class ServiceProvider extends AddonServiceProvider
 {
