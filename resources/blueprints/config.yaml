@@ -1,0 +1,12 @@
+disabled_collections:
+  display: 'Collections'
+  instructions: 'Collections you want to disable.'
+  type: collections
+  mode: select
+  width: 50
+disabled_taxonomies:
+  display: 'Taxonomies'
+  instructions: 'Taxonomies you want to disable.'
+  type: taxonomies
+  mode: select
+  width: 50
