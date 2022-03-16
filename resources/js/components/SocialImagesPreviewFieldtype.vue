@@ -1,16 +1,33 @@
 <template>
-    <div>
-        <img v-if="this.meta.image" :src="this.meta.image">
 
-        <div v-else class="p-3 text-center border rounded" style="border-color: #c4ccd4; background-color: #fafcff">
-            <small class="mb-0 help-block">Save the entry to generate your first {{ this.meta.title }} image.</small>
+    <element-container @resized="resize">
+        <div ref="container" class="relative w-full overflow-hidden" :style="{'padding-top': aspectRatio}">
+            <iframe ref="iframe" class="absolute inset-0 w-full h-full" :src="this.meta.url" scrolling="no"></iframe>
         </div>
-    </div>
+    </element-container>
+
 </template>
 
 <script>
     export default {
         name: 'social-images-preview-fieldtype',
         mixins: [Fieldtype],
+
+        computed: {
+            aspectRatio() {
+                return `${(this.meta.height / this.meta.width) * 100}%`;
+            },
+        },
+
+        methods: {
+            resize() {
+                this.$refs.iframe.contentDocument.body.style.transformOrigin="top left"
+                this.$refs.iframe.contentDocument.body.style.transform=`scale(${this.getContainerWidth() / this.meta.width})`
+            },
+
+            getContainerWidth() {
+                return this.$refs.container.offsetWidth;
+            },
+        }
     }
 </script>

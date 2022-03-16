@@ -25,6 +25,15 @@ class SocialImage
         return [$this->specs['field'] => $this->path()];
     }
 
+    public function toFieldtypeArray(): array
+    {
+        return [
+            'width' => $this->specs['width'],
+            'height' => $this->specs['height'],
+            'url' => $this->templateUrl(),
+        ];
+    }
+
     protected function templateUrl(): string
     {
         return "{$this->entry->site()->absoluteUrl()}/social-images/{$this->specs['type']}/{$this->entry->id()}";

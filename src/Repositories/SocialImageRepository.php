@@ -20,6 +20,11 @@ class SocialImageRepository
         })->toArray();
     }
 
+    public function make(Entry $entry, array $specs): SocialImage
+    {
+        return (new SocialImage($entry, $specs));
+    }
+
     public function openGraph(Entry $entry): array
     {
         return (new SocialImage($entry, $this->specs('og')))->generate();
